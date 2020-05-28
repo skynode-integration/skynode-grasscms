@@ -1,0 +1,23 @@
+{
+  "name": "grasshopper-cms",
+  "version": "0.27.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "atob": "^2.0.3",
+    "bluebird": "^3.5.1",
+    "cookie-parser": "^1.4.3",
+    "grasshopper-api": "file:../grasshopper-api",
+    "lodash": "^4.17.2",
+    "requirejs": "^2.3.5"
+  }
+}

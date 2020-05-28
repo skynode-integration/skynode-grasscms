@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "6"
+  - "7"
+#  - "8"
+services:
+  - mongodb
+sudo: false
+before_script:
+  - npm install -g mocha
+  - npm install -g grunt-cli
+notifications:
+  email:
+    - travis.mchattie@thinksolid.com
+    - peter.ajtai@thinksolid.com
+    - cooper.hilscher@thinksolid.com

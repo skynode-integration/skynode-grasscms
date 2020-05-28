@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "0.10"
+  - "0.11"
+  - "0.12"
+  - "4"
+  - "5"
+services:
+  - mongodb
+before_script:
+  - npm install -g grunt-cli
+notifications:
+  email:
+    - travis.mchattie@thinksolid.com
+    - peter.ajtai@thinksolid.com
+    - cooper.hilscher@thinksolid.com
+    - greg.larrenaga@thinksolid.com

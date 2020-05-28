@@ -1,0 +1,34 @@
+# Site settings
+title: Grasshopper Core Documentation
+email: your-email@domain.com
+description: "A CMS for the people, a great experience for developers, users and customers. Use Grasshopper to drastically speed up development for distributed systems. Support your clients better."
+baseurl: "/grasshopper-core-nodejs"
+url: "http://solid-interactive.github.io"
+destination: ../_docs
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+permalink: pretty
+collections:
+  core:
+    output: true
+  api:
+      output: true
+  admin:
+      output: true
+  recipes:
+      output: true
+  documentation:
+    output: true
+  contributing:
+      output: true
+  gettingstarted:
+    output: true
+  concepts:
+    output: true
+  content:
+      output: true
+  authentication:
+      output: true
+  users:
+      output: true

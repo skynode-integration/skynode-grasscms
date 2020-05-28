@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+if ! command -v nodemon >/dev/null 2>&1
+    then
+        npm install -g nodemon
+    fi

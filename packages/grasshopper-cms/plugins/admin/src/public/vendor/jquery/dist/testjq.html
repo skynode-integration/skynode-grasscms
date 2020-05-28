@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script src="./jquery.js.ori.js"></script>
+<script>
+$(function(){
+    // .notify()と.resolve()の組み合わせの検証
+     
+    // Deferredオブジェクト１作成
+    var defer_1 = new $.Deferred;
+    // [1]
+    // Deferredオブジェクト１作成直後に.notify()にて通知する（１回目）
+    defer_1.notify("[1]Deferredオブジェクト１作成直後に.notify()にて通知する（１回目）");
+         
+    // コード簡略化の為、3つのDeferredコールバックの.progress()と.done()と.fail()をチェーンメソッドで繋ぐ
+    defer_1.progress(function(data){
+      msg = "progress()が呼ばれました：" + data;
+      $("ul").append("<li>" + msg + "</li>");
+    }).done(function(data){
+      msg = "done()が呼ばれました：" + data;
+      $("ul").append("<li>" + msg + "</li>");
+    }).fail(function(data){
+      msg = "fail()が呼ばれました：" + data;
+      $("ul").append("<li>" + msg + "</li>");
+    });
+ 
+
+ 
+    // [2]
+    // .notify()にて通知する（２回目）
+    defer_1.notify("[2]Deferredオブジェクト１作成直後に.notify()にて通知する（２回目）");
+ 
+    // [3]
+    // Deferredオブジェクト１に.resolve()して解決済みにする
+    defer_1.resolve("[3]Deferredオブジェクト１に.resolve()して解決済みにする");
+  
+    // [4]
+    // 解決済みにした後で.notify()にて通知、ただし未解決の状態ではなくなっているので、progressはコールバックされず
+    defer_1.notify("[4]解決済みにした後で.notify()にて通知");
+ 
+ 
+    // .notify()と.reject()の組み合わせの検証
+     
+    // Deferredオブジェクト２作成
+    var defer_2 = new $.Deferred;
+     
+    // コード簡略化の為、3つのDeferredコールバックの.progress()と.done()と.fail()をチェーンメソッドで繋ぐ
+    defer_2.progress(function(data){
+      msg = "progress()が呼ばれました：" + data;
+      $("ul").append("<li>" + msg + "</li>");
+    }).done(function(data){
+      msg = "done()が呼ばれました：" + data;
+      $("ul").append("<li>" + msg + "</li>");
+    }).fail(function(data){
+      msg = "fail()が呼ばれました：" + data;
+      $("ul").append("<li>" + msg + "</li>");
+    });
+ 
+    // [5]
+    // Deferredオブジェクト２に.reject()して解決済みにする
+    defer_2.reject("[5]Deferredオブジェクト２に.reject()して拒否にする");
+  
+    // [6]
+    // 拒否した後で.notify()にて通知、ただし未解決の状態ではなくなっているので、progressはコールバックされず
+    defer_1.notify("[6]拒否にした後で.notify()にて通知");
+
+   $("ul").append("<li>" + "ul.id=" + $("ul").attr("id") + "</li>");
+   $("ul").append("<li>" + "ul.text=" + $("ul.abc").text() + "</li>");
+
+});
+</script>
+</head>
+<body>
+  <ul>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,7 @@
+extends /plugin.layout.pug
+
+block app
+    h1 Hello from server!
+    ul
+        each user in users
+            li= user.displayname

@@ -1,0 +1,13 @@
+/.idea
+/.data
+/node_modules
+/dist
+/cache
+/log
+/.vagrant
+configuration.json
+atlassian-ide-plugin.xml
+Vagrantfile
+.DS_Store
+_docs
+*.log
