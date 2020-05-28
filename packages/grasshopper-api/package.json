@@ -47,7 +47,7 @@
     "grasshopper-core": "file:../grasshopper-core",
     "lodash": "^2.4.1",
     "method-override": "~1.0.1",
-    "morgan": "~1.1.0",
+    "morgan": "~1.10.0",
     "multiparty": "~3.3.1",
     "purest": "^2.0.0",
     "q": "~1.0.1",
