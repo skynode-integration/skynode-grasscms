@@ -68,7 +68,7 @@
     "nodelint": "~0.6.2",
     "sinon": "~1.7.3",
     "supertest": "~0.7.1",
-    "uglify-js": "1.2.x"
+    "uglify-js": "3.9.x"
   },
   "jam": {
     "main": "lib/grasshopper-api.js",
