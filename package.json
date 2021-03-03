@@ -20,6 +20,6 @@
   "dependencies": {
     "express": "^4.14.1",
     "grasshopper-cms": "file:./packages/grasshopper-cms",
-    "pug": "^2.0.0-rc.2"
+    "pug": "^3.0.1"
   }
 }
